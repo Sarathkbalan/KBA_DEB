@@ -1,0 +1,44 @@
+body{
+    background-image: url(5153829.jpg);
+}
+.signup{
+    color: rgb(134, 31, 157);
+    margin-bottom: 500px;
+    padding-left: 20px;
+    border: solid;
+    height: 550px;
+    width: 300px;
+    background-color: rgba(250, 235, 215, 0.195);
+    border-radius: 20px;
+    margin: auto;
+}
+.Email{
+    height: 30px;
+    width: 200px;
+}
+.a{
+
+    width: 200px;
+    height: 35px;
+
+}
+.w{
+    margin-left: 150px;
+}
+.w input{
+    
+    width: 56px;
+    height: 35px;
+    align:right;
+    color: #dacdcd;
+
+    background-color: rgba(70, 8, 86, 0.937);
+}
+.e{
+    text-decoration: none;
+    color: rgb(41, 3, 40);
+}
+.a{
+    color: rgb(76, 4, 98);
+    font-size: medium;font-style: oblique;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEPAGE</title>
+</head>
+<body>
+    <script>
+           document.write("<br>natural numbers from 10 to 50 <br>")
+             i=10
+             s=0
+             count=0
+             while(i<=50)
+                      {
+                        document.write(i, ",")
+                        s=s+i;
+                        count++
+                        i++;
+
+                      }
+                      
+                      document.write( "<br> sum is =" ,s ,"<br> average is =",s/count)
+
+
+                      document.write(" <br> cube stating from")
+                        for(i=10;i<=30;i++)
+                      {
+                        document.write("<br> cube of a number is=",i*i*i)
+
+                      }
+                      document.write(" <br> print multiplication table")
+                        n=8
+                        for(i=1;i<=10;i++)
+                      {
+                        document.write("<br> multiplication of a number is=",n*i)
+
+                      }
+                      document.write("<br>check whether the given string is palindrome or not")
+                        str = "malayalam";
+                        rev = "";
+
+                          for (i = str.length - 1; i >= 0; i--){
+                          rev += str[i];
+                             }
+
+                     document.write(str === rev ? `<br>The given string ${str} is Palindrome` : `The given string ${str} is  Not a Palindrome`);
+
+
+
+
+                     document.write("<br><br> Reverse of a number")
+                      n="98765123"
+                      rev = "";
+
+                       for (i = n.length - 1; i >= 0; i--){
+                        rev += n[i];
+                         }
+                         document.write("<br> the reverse of the number ",n," is: ",rev)
+
+
+
+                      document.write("<br><br>print the patterns")
+    
+                        document.write("<br>25,30,35,40,45,50")
+                        document.write("<br>The pattern is: ")
+                        for(i=25;i<=50;i=i+5){
+                        }
+    
+                        document.write("<br><br>10,100,1000,10000")
+                        document.write("<br>The pattern is: ")
+                        m=10;
+                    for(i=m;i<=14;i++) {
+                         document.write(m,",");
+                         m=m*10;
+                         }
+
+    
+                          document.write("<br><br>8,10,12,14,16,18,20")
+                          document.write("<br>The pattern is: ")
+                           n=8;
+                             for(i=n;i<=20;i=i+2){
+                             document.write(i,",")
+                        }
+
+
+    </script>
+    
+</body>
+</html>

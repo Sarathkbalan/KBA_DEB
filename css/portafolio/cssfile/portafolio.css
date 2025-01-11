@@ -1,0 +1,204 @@
+body{
+    background-image: url(/image/5651978.png);
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+
+}
+.home{
+    background-color: rgb(236, 223, 223);
+    height: 550px;
+    width: 1450px;
+    background-image: url(/image/dream.jpg);background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+
+    
+
+}
+.home h1{
+    padding-top: 200pX;
+    padding-left: 280PX;
+    background-color: rgb(137, 131, 124);
+    color: yellow;
+
+}
+
+.home P{
+
+    padding-left: 140PX;
+    color: antiquewhite;
+    font-weight: bolder;
+}
+
+.home img{
+    padding-left: 900px;
+    margin-top: -330px;
+}
+.port{
+     font-size: larger;
+     color: rgb(39, 22, 41);
+     background-color: rgba(238, 231, 231, 0.448);
+     height: 50px;
+     width: 1450px;
+     text-align: center;
+     padding-top: 10px;
+     font-size: xx-large;
+     
+}
+
+.SUMMARY P{
+
+    
+    position: absolute;
+    height: 160px;
+    width:400px ;
+    margin-left: 250px;
+    margin-top: -400px;
+    color: aliceblue;
+}
+.EXPERIENCE{
+    background-color: rgba(218, 218, 184, 0.641);
+    height: 200px;
+    width: 1400px;
+    color:rgb(52, 50, 54);
+    margin-top: -170px;
+    border-radius: 20px;
+    padding-left: 45px;
+    padding-top: 20px;
+   
+
+}
+.EXPERIENCE h3{
+    color: rgb(40, 14, 64);
+
+}
+
+
+
+
+img{
+    border-radius: 150px;
+    border: none;
+}
+.head{
+    height: 200px;
+    width: 1450px;
+    color: rgb(70, 119, 119);
+    margin-top: -22px; 
+
+}
+.education{
+    background-color: rgba(75, 64, 64, 0.63);
+    height: 400px;
+    width: 400px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-radius: 20px;
+    color: rgb(231, 191, 235);
+    font-weight: bold;
+    margin-left: 200px;
+}
+.education h3 {
+    color: rgb(32, 2, 35);
+}
+
+.PROJECTS{
+    background-color:rgba(75, 64, 64, 0.63);
+    height: 400px;
+    width: 400px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-radius: 20px;
+    color: rgb(231, 191, 235);
+    font-weight: bold;
+    position: absolute;
+    margin-left: 800px;
+}
+.PROJECTS h4 {
+    color: rgba(126, 242, 255, 0.989);
+    font-weight: bold;
+    font-size: larger;
+}
+.PROJECTS h3 {
+    color: rgb(32, 2, 35);
+}
+.table{
+    background-color: rgba(75, 64, 64, 0.63);
+    margin-left: 560px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+.skills{
+    background-color: rgb(124, 103, 88);
+    height: 260px;
+    width: 750px;
+    text-align: center;
+    margin-left: 350px;
+    position: relative;
+}
+.cont1{
+    background-color: rgba(255, 255, 255, 0.971);
+    height: 100px;
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 200px;
+   
+}
+.cont1 h3{
+    padding-left: 40px;
+    display: inline;
+
+}
+.cont1 img{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cont2{
+    background-color: rgb(251, 251, 251);
+    height: 100px;
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 200px;
+    position:absolute;
+    left: 250px;
+    
+}
+.cont2 h3{
+    padding-left: 40px;
+    display: inline;
+
+}
+.cont2 img{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cont3{
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 200px;
+    position:absolute;
+    left: 480px;
+    top:45PX
+}
+.cont3 h3{
+    padding-left: 40px;
+    display: inline;
+
+}
+.cont3 img{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.aboutme a{
+    text-decoration: none;
+    background-color: rgb(221, 188, 19);
+    position:absolute;
+    margin-top: -250px;
+    margin-left: 350px;
+    color: beige;
+    height: 30px;
+    width: 110px;
+    padding-left: 30px;
+    padding: 10px;
+}

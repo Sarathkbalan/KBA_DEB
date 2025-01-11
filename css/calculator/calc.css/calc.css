@@ -1,0 +1,196 @@
+.con1{
+  height: 620px;
+  width: 510px;
+  background-color: black;
+  margin-left: 450px;
+ margin-top: 90px;
+ color: antiquewhite;
+ border-radius: 20px;
+ position: absolute;
+ left: 50px;
+ 
+}
+
+.h{
+    font-size: x-large;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-top: 30px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+.con2{
+    height: 100px;
+    width: 430px;
+    background-color: rgba(230, 234, 234, 0.899);
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    color: rgb(17, 16, 16);
+    font-weight: bold;
+    text-align: center;
+   
+   
+    
+}
+.num1{
+    margin-right: 450px;
+    font-size: 20px;
+}
+.num{
+    font-size: 49px;
+    margin-top: -59px;
+    font-style: normal;
+}
+
+
+.box{
+    position: absolute;
+    top: 55px;
+    left: 350px;
+    height:30px ;
+    width: 120px;
+    background-color: rgba(221, 228, 159, 0.629);
+}
+.head{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+
+}
+.button{
+    margin-left: 23px;
+    
+}
+.btn{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    background-color: burlywood;
+   
+}
+.CORRECT{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:8px;
+    font-weight: bold;
+    background-color: burlywood;
+    border-radius: 15px;
+   
+
+}
+.AUTOREPLAY{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:8px;
+    font-weight: bold;
+    background-color: burlywood;
+    border-radius: 15px;
+}
+.SET{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:15px;
+    font-weight: bold;
+    color: azure;
+    background-color: rgb(5, 106, 132);
+    border-radius: 15px;
+}
+.yellow{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:15px;
+    font-weight: bold;
+    color: rgb(8, 9, 9);
+    background-color: rgb(231, 246, 19);
+    border-radius: 15px;
+}
+.small{
+    border-radius: 15px;
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:15px;
+    font-weight: bold;
+    color: rgb(8, 9, 9);
+    background-color: burlywood;
+}
+.rose{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:15px;
+    font-weight: bold;
+    color: rgb(8, 9, 9);
+    background-color: rgb(216, 17, 180);
+}
+.rose1{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:10px;
+    font-weight: bold;
+    color: rgb(8, 9, 9);
+    background-color: rgb(216, 17, 180);
+}
+.plusbtn{
+    height: 0px;
+    width: 0px;
+    margin-top: 30px;
+    margin-left:50px;
+    font-size:20px;
+    font-weight: bold;
+    color: rgb(8, 9, 9);
+    background-color: rgb(216, 17, 180);
+
+}
+.plus{
+    position: absolute;
+    top: 460px;
+    left: 290px;
+    height: 92px;
+    width: 50px;
+    margin-top: 47px;
+    margin-left:50px;
+    background-color: rgb(84, 77, 77);
+    box-shadow: indianred;
+    border: solid;
+    border-width: 3px;
+    border-color: rgb(133, 133, 141);
+    font-size:20px;
+    font-weight: bold;
+}
+.grey{
+    height: 30px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left:20px;
+    font-size:20px;
+    font-weight: bold;
+    background-color: brown;
+}
+.text{
+    position: absolute;
+    top: 355px;
+    left:700px;
+    color: antiquewhite;
+    font-size: small;
+}
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: solid; height: 870px; width: 320px; padding: 50px;">
+    <h3 id="name">Item1:</h3>
+    <h3>Quantity:</h3>
+    <input type="number" style="height: 40px;width: 200px;" id="Quantity1">
+    <h3 >Price:</h3>
+    <h4>500</h4>
+   
+    <input type="submit" value="Add To Cart" onclick="Addtocart(`name`,500,`Quantity1`)"  style="height: 40px;width: 100px;"  >
+    
+
+    <h3 id="name1">Item1:</h3>
+    <h3>Quantity:</h3>
+    <input type="number" style="height: 40px;width: 200px;" id="Quantity2">
+    <h3>Price:</h3>
+    <h4>1500</h4>
+    <input type="submit" value="Add To Cart" onclick="Addtocart(`name`,1500,`Quantity2`)"  style="height: 40px;width: 100px;"  >
+
+    <h3>Item1:</h3>
+    <h3>Quantity:</h3>
+    <input type="number" style="height: 40px;width: 200px;" id="Quantity3">
+    <h3>Price:</h3>
+    <h4>2500</h4>
+    <input type="submit" value="Add To Cart" onclick="Addtocart(`name`,2500,`Quantity3`)" style="height: 40px;width: 100px;"  >
+    
+</div>
+<button style="height: 40px;width: 200px;margin: 80px;" onclick="checkout()" >Checkout</button>
+
+<script>
+    array=[]
+    function Addtocart(name ,price, Quantitybox ){
+        const Quantityitem = document.getElementById(Quantitybox).value;
+
+
+      array.push({name ,price, Quantityitem} );
+    //   console.log(name,'added to cart');
+      console.log(price*Quantityitem);
+      
+    }
+    function checkout() {
+           
+
+           let totalPrice = 0; 
+           array.forEach(item => {
+               totalPrice += item.price * item.Quantityitem;
+               console.log(totalPrice)
+           });
+
+           document.getElementById("print").innerHTML=(`TotalPrice: ₹${totalPrice}`);
+       }
+
+
+</script>
+<p id="print"></p>
+  
+</body>
+</html>

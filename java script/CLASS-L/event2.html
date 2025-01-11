@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> Enter the length of sqaure</label>
+    <input type="text"  id="sqaure">
+    <br><br><br>
+    <button onclick="result() " >Area</button>
+    <p id="PRINT"></p>
+    <script>
+        function result(){
+            const value=document.getElementById("sqaure").value;
+            const area=value*value;
+            document.getElementById("PRINT").innerHTML=area;
+        }
+       
+
+    </script>
+</body>
+</html>

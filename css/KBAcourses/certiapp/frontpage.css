@@ -1,0 +1,34 @@
+.h{
+    background-color: rgb(80, 184, 218);
+    text-decoration: none;
+    color: rgb(251, 248, 243);
+    font-size: large;
+    height: 20px;
+    width: 30px;
+    font-size: x-large;
+    padding: 10px;
+    
+}
+.issue{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+.head{
+    text-align: center;
+    padding-left: 20px;
+
+}
+.box{
+    border: solid;
+    border-color:rgb(80, 184, 218);;
+    border-width: 2px;
+}
+.search{
+    color: rgb(233, 236, 236);
+    background-color:rgb(80, 184, 218);;
+    border: none;
+}
+.app{
+    margin-top: 80px;
+}

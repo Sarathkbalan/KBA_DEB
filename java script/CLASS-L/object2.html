@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person =new Object()
+        person.fname="arun";
+        person.lname="kumar";
+        person.hobby="drawing";
+        person.basicpay=20000
+        person.experience="5year";
+        person.salary=30000
+        person.getDetails=function(){
+            return `person name=${person.fname+person.lname} <br>person hobby=${person.hobby}<br>person basic pay=${person.basicpay+person.salary}<br>person experience=${person.experience}`
+        }
+        
+
+        document.write("Person Details:<br>",person.getDetails())
+
+
+        const myArray=Object.values(person);
+        console.log("Array",myArray);
+        const str=JSON.stringify(person);
+        console.log("JSON string",str);
+        const JsonF=JSON.parse(str);
+        console.log("JSON format",JsonF);
+        
+        
+
+    </script>    
+</body>
+</html>

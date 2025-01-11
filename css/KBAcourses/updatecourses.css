@@ -1,0 +1,73 @@
+.nav{
+    background-color: rgb(229, 229, 207);
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+   
+
+    
+}
+.nav a{
+    text-decoration: none;
+    color: brown;
+    align-items: center;
+    justify-content:space-between ;
+}
+.nav a:hover{
+    color: rgb(121, 15, 143);
+    background-color: rgb(195, 121, 31);
+}
+.img{
+    height: 60px;
+    width: 40px;
+}
+table{
+    margin: auto;
+    height: 400px;
+    width: 370px;
+    background-color:rgb(228, 217, 235);
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin-top: -20px;
+
+}
+.add{
+    position: relative;
+    background-color: aqua;
+    width: 120px;
+    
+}
+table th{
+    text-align: left;
+    color: rgb(41, 6, 74);
+    padding-left: 10px;
+    font-size:large ;
+}
+table input{
+    height: 30px;
+    width: 340px;
+}
+table select{
+    height: 30px;
+    width: 340px;
+}
+.button{
+    color: rgb(200, 161, 191);
+    border-radius: 50px;
+    background-color: rgb(79, 13, 149);
+    font-size: medium;
+
+}
+.table{
+    margin: auto;
+    width: 370px;
+    background-color:rgb(228, 217, 235);
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 20px;
+    color: rgb(48, 4, 48);
+}

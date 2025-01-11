@@ -1,0 +1,26 @@
+body{
+   background-color: rgba(27, 58, 52, 0.984);
+   
+}
+.gmail{
+    background-color: aliceblue;
+    height: 150px;
+    width: 400px;
+    margin-top:80px ;
+    margin-left: 150px;
+    display: flex; 
+    align-items: center;
+    border-radius: 100px;
+    padding-left: 20px;
+
+}
+.new{
+    position: absolute;
+    top: 00px;
+    left: 700px;
+}
+body img{
+    height: 100px;
+    padding-left: 97px;
+
+}

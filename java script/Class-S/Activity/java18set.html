@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Program to print a para about yourself using createElement() , textContent & append child. -->
+    <div id="about">
+        <h1>
+           
+        </h1>
+    </div>
+    <h1>Cinema List</h1>
+    
+
+
+    <script>
+         let element1= document.createElement("h2")
+         element1.innerHTML=" SARATH K BALAN";
+         document.getElementById("about").appendChild(element1);
+
+        let aboutme=document.createElement("p")
+        aboutme.textContent=" As a B.Tech graduate in Industrial Engineering, I’ve always been passionate about enhancing industrial processes. With a blend of technical skills and a collaborative mindset, I aspire to lead initiatives that merge innovation and efficiency, creating meaningful impact in the industry and continuously learning from every challenge."
+        let name=document.getElementById("about").appendChild(aboutme)
+
+        </script>
+<!-- Make an unordered list of cinemas on html page using javascript. -->
+      <div id="cinema-container">
+     
+      </div>
+    <script>
+            
+   
+    const cinemas = [
+    "Mad Max",
+    "SpiderMan",
+    "Iron Man",
+    "Hulk",
+    "Bat Man",
+    "Joker"
+             ];
+
+    const container = document.getElementById("cinema-container");
+
+    const ul = document.createElement("ul");
+
+    for (let i = 0; i < cinemas.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = cinemas[i];                
+    ul.appendChild(li);                    
+}
+
+container.appendChild(ul);
+
+
+     </script>
+  <select  id="cake"></select><br>
+  <script>
+       dropdown=document.getElementById("cake");
+
+      opt1 = document.createElement("option");
+      opt1.textContent = "Red Velvet";
+      dropdown.appendChild(opt1);
+
+      opt2 = document.createElement("option");
+      opt2.textContent = "Black Forest";
+      dropdown.appendChild(opt2);
+
+      opt3 = document.createElement("option");
+      opt3.textContent = "White Forest";
+      dropdown.appendChild(opt3);
+      
+      document.write("Second option value: " + document.getElementById("cake").options[1].value);
+  </script>
+ </script>
+ <div id="experience">
+
+ </div>
+ <script>
+     let name1=document.createElement("h3")
+     name1.innerHTML="Experience on KBA: "
+     document.getElementById("experience").appendChild(name);
+
+     //Good
+     let radio1=document.createElement("input")
+     radio1.type="radio"
+     radio1.name="button"
+     radio1.id="good"
+     radio1.value="Good"
+     document.getElementById("experience").appendChild(radio1);
+
+     let r1=document.createElement("label")
+     r1.innerHTML="Good"
+     document.getElementById("experience").appendChild(r1);
+     
+     //average
+     let radio2=document.createElement("input")
+     radio2.type="radio"
+     radio2.name="button"
+     radio2.id="average"
+     radio2.value="Average"
+     document.getElementById("experience").appendChild(radio2);
+
+     let r2=document.createElement("label")
+     r2.innerHTML="Average"
+     document.getElementById("experience").appendChild(r2);
+
+     //Bad
+     let radio3=document.createElement("input")
+     radio3.type="radio"
+     radio3.name="button"
+     radio3.id="bad"
+     radio3.value="Bad"
+     document.getElementById("experience").appendChild(radio3);
+
+     let r3=document.createElement("label")
+     r3.innerHTML="Bad"
+     document.getElementById("experience").appendChild(r3);
+
+
+
+ </script>
+
+    <!-- Print your full name storing fname & lname. Print in Uppercase. -->
+    <p> Print in Uppercase.</p>
+    <h4 id="name"></h4>
+    <input type="text" id="fname">
+    <input type="text"  id="lname">
+    <button onclick="out()">print</button>
+    <script>
+    function out(){
+    const firstname1=document.getElementById("fname").value;
+    const lastname1=document.getElementById("lname").value;
+    const fullname=`${firstname1} ${lastname1}`.toUpperCase();
+    document.getElementById("name").innerHTML=(fullname);
+    }
+
+    </script>
+
+    <br><br><br>
+    <!-- “You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence. -->
+    <p>“You can study anything if you have a will to do it”.Take the substrings
+    “You can study”, “you”,”will”,”do it” and combine as a sentence.</p>
+    <p id="print"></p>
+    <script>
+    const s="You can study anything if you have a will to do it"
+    const s1=s.substring(0,13);
+    const se2=s.substring(26,29)
+    const s3=s.substring(37,41)
+    const s4=s.substring(45)
+    const output=`${s1} ${se2} ${s3} ${s4}`
+    document.getElementById("print").innerHTML=output
+    </script>
+    <br><br><br>
+   
+    <!-- “MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain. -->
+    <p>“MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.”
+    Replace MongoDB with Blockchain.</p>
+  
+    <script>
+    const line1="MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation."
+    const line=line1.replace(/MongoDB/g, "Blockchain")
+    document.write(line1)
+    document.write("<br>",line)
+
+   
+    //   <!-- Print the string “MongoDB is a decentralised distributed ledger” using substring/substr. -->
+    
+    const line2=line1.substring(0,46)
+     document.write("<br>",line2)
+
+    //  Compare “Hello World” & “hEllO World” and display the result & its type.
+    document.write("<br><br>Compare “Hello World” & “hEllO World” and display the result & its type.   ")
+    const value1="Hello World";
+    const value2="hELLO World";
+    value3= value1===value2;
+    document.write("<br>The result:",value3)
+    document.write("<br>type:",typeof value3)
+
+    //  Print this statement “ I am _ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”
+    document.write("<br><br>Print this statement “ I am _ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”")
+    const age=18;
+    const brotherage=30;
+    document.write(`<br>Print this statement I am${age} yrs of old and my brother is 10 yrs older to me. He is now${brotherage} years old.`)
+
+
+
+    const fname="sarath"
+    const lname=" k Balan"
+    const place="wayanad"
+    fullname=`${fname}${lname}`.toUpperCase();
+    placename1=`${place}`.toUpperCase();
+    document.write(`<br><br><br>My name is ${fullname} .I live in ${placename1}`)
+  
+
+    // Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.
+
+    const l1=`<br><br><br>“I like to play video games.” “I don’t like Hide & seek”.`
+    const l=l1.replace(/like/g, "don't like")
+    document.write(l1)
+    document.write(l)
+
+    // Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
+          let   i=22
+          let   j=30
+      document.write("<br><br>The value is: ",i+j>=50 & i+j<=80?65:80)
+    // Program to find whether the person is eligible for voting using ternary operator          
+      document.write(`<br> <br><br>Program to find the person is eligible `)
+      let age1=12 ;
+                        
+                      
+     document.write(age1>=18?" <br> person is eligible":" <br>not eligible for voting ");
+        
+
+
+    </script>
+
+
+</body>
+</html>

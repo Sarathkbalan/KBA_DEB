@@ -1,0 +1,63 @@
+body{
+    background-image: url(5153829.jpg);
+    
+}
+.loginpage{
+    background-color: gb(86, 59, 59);
+    background-size: 10px;
+    height: 405px;
+    margin-top: 100px;
+}
+.login{
+    
+    margin-bottom: 500px;
+    padding-left: 20px;
+    border: solid;
+    height: 400px;
+    width: 300px;
+    background-color: rgba(74, 6, 139, 0.121);
+    border-radius: 99px;
+    margin: auto;
+   
+}
+.Email{
+    width: 220px;
+    height: 30px;
+    font-size: large;
+}
+.button{
+    background-color: rgb(106, 21, 21);
+    border-radius: 20px;
+    color: azure;
+    font-size: medium;
+
+
+}
+.password{
+    color: rgb(186, 39, 39);
+    text-decoration: none;
+    padding-left: 50px;
+    text-align:right;
+    justify-content:space-between ;
+    font-size: large;
+
+
+
+    
+
+}
+.sign{
+    color:rgb(65, 8, 40)
+
+}
+.signup {
+    border-radius: 20px;
+    background-color: rgb(45, 6, 54);
+    font-size: medium;
+   
+    
+}
+.a {
+    text-decoration:rgb(225, 234, 234);
+    color: azure;
+}

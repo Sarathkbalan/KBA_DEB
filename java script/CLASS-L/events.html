@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> Age :</label>
+    <input type="text" onchange="handlechange(event)" id="age">
+    <br><br><br>
+    <button onclick="click1()">submit</button>
+   
+    <p id="demo"></p>
+    <script>
+        let age;
+        function handlechange(events){
+            document.getElementById(event.target.value);
+            // document.write(event.target.value);
+            age=event.target.value;
+            console.log(age);
+            // document.getElementById("demo").innerHTML=age
+        }
+
+        function click1(){
+        
+            console.log(age);
+            document.getElementById("demo").innerHTML=age
+        }
+    
+        
+    </script>
+    
+</body>
+</html>

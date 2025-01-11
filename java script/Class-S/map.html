@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        function MapMethods(){
+            // we can use both the statements 
+            // By using sting
+        // const myMap=new Map();
+        // myMap.set("name","sarath");;
+        // myMap.set("age",20);
+        // myMap.set("employ",true);
+        // myMap.set("Role",["Admin" ,"user"]);
+
+
+        // console.log(myMap);
+        // console.log(myMap.get("name"));
+        // console.log(myMap.get("age"));
+        // console.log(myMap.get("employ"));
+
+        // by using array statements
+        const myMap=new Map([
+            ["name","sarath"],["age",20],["employ",true],["Role",["Admin" ,"user"]]
+
+        ]);
+        
+        document.getElementById("get").innerHTML="Name:"+myMap.get("name");
+        document.getElementById("delete").innerHTML="age:"+myMap.delete("age");
+        document.getElementById("has").innerHTML="employ:"+myMap.has("employ");
+        document.getElementById("clear").innerHTML="map size:"+myMap.size;
+
+        let roles=myMap.get("Role")
+        document.getElementById("role").innerHTML="After Insering Mymap:"+roles.join("&nbsp; and &nbsp;");
+        console.log(myMap);
+         
+        // map iteration
+        let output="";
+        myMap.forEach((value,key)=>{
+            // to give and value in btw the array values
+            if(Array.isArray(value)) 
+        {
+            output+=key +"="+ value.join(" and ") +"<br>"
+        }
+        else
+        // if there is no array and is not used we can excute this statement  
+            output+=key +"="+ value +"<br>"
+        });
+        document.getElementById("iteration").innerHTML=output;
+
+        // myMap.clear();
+        // console.log("after removing my map:");
+        
+        
+    }
+    </script>
+    <h1 style="color: rgb(42, 140, 165);">Map Methods</h1>
+    <h2 style="color: brown;">Map Operators</h2>
+    <button onclick="MapMethods()" >Map Methods</button>
+    <div style="color: rgb(44, 84, 84);">
+    <div id="get"></div>
+    <div id="has"></div>
+    <div id="delete"></div>
+    <div id="clear"></div>
+    <div id="role"></div>
+   
+   </div>
+   <h1 style="color: rgb(42, 140, 165);">Method iteration</h1>
+   <div id="iteration"></div>
+
+
+<h1 style="color: rgb(42, 140, 165);">cart system</h1>
+<button onclick="cart()" >checkout box</button>
+    <div id="product"></div>
+    <div id="price"></div>
+    <div id="quantity"></div>
+    <div id="total price"></div>
+<script>
+    function cart(){
+const product=new Map([
+["product","apple"],
+["price",200],
+["quantity",2],
+
+
+]);
+
+document.getElementById("product").innerHTML="product:"+product.get("product");
+document.getElementById("price").innerHTML="price:"+product.get("price");
+document.getElementById("quantity").innerHTML="quantity:"+product.get("quantity");
+let total=product.get("price")*product.get("quantity")
+document.getElementById("total price").innerHTML="total price ;"+total
+
+    }
+    
+</script>
+
+    
+</body>
+</html>

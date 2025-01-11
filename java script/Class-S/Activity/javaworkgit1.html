@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+                document.write(`Program to swap two numbers using a temporary variable`)
+                let x=45
+                let y=35
+                document.write(`<br> value of x is = ${x}`)
+                document.write(`<br> value of y is = ${y}`)
+                let z=x
+                    x=y
+                    y=z
+                document.write(`<br>value after swapping x=${x} <br>value after swapping y=${y}`)
+
+
+               
+                document.write(`<br><br>Program to swap two numbers without using a temporary variable`)
+                 x=20
+                 y=60
+                 document.write(`<br> value of x is = ${x}`)
+                 document.write(`<br> value of y is = ${y}`)
+                x = x + y; 
+                y = x - y;
+                x = x - y;
+                document.write(`<br>value after swapping x=${x} <br>value after swapping y=${y}`)
+                    
+                document.write(`<br><br><br>Program to convert Celsius to fahrenheit`)
+                let celsius=100;
+                let fahrenheit = (celsius * 9/5) + 32;
+                document.write(`${celsius}°C is equal to ${fahrenheit}°F.`);
+
+                document.write(`<br><br>Program to find square of a number`)
+                let a=20;
+                document.write(` <br>The square of a is ${ a**2}`);
+
+                document.write(`<br> <br><br>Program to find cube of a number`)
+                 let d=4;
+                 document.write(` <br>The cube of a is ${d**3}`);
+                 
+                 document.write(`<br> <br><br>Program to find area of a squre`)
+                 let r=9;
+                 document.write(` <br> The square of a is area ${ r**2}`);
+
+                 document.write(`<br> <br><br>Program to find area of a circle`)
+                 let radius =3;
+                 document.write(`The area of the circle is ${ Math.PI*(radius**2)}`);
+
+
+                 document.write(`<br> <br><br>Program to find area of a Rectangle`)
+                 let l=20
+                     w=30
+                document.write(` <br>The area of the rectangle is ${(l*w)}.`);
+
+
+                document.write(`<br> <br><br>Program to find area of a triangle`)
+                let ba=20
+                    he=40
+                document.write(`<br> The area of the triangle is ${1/2*(ba*he)}.`);
+                
+
+                document.write(` <br> The square of a is perimeter ${ r**2}`);
+                document.write(`<br>The perimeter of the circle is ${ 2*(Math.PI*(radius**2))}`);
+                document.write(` <br>The perimeter of the rectangle is ${2*(l*w)}.`);
+
+                document.write(`<br> <br><br>Program to find area of a triangle`)
+                 let la=20
+                     wi=30
+                     h=15
+                document.write(` <br>The perimeter of the triangle is ${(la*wi*h)}.`,"<br>");
+
+
+
+                  document.write(`<br> <br><br>Program to find  Simple Interest`)
+                   let p=20
+                       ra=300
+                       t=40
+                       document.write(` <br>The simple interest is ${(p*ra*t)/100}.`,"<br>");
+
+                
+                       document.write(`<br> <br><br>Program to find  compound Interest`)
+                   let rt=5
+                       p=300
+                       t1=4
+                       n=2
+                       document.write(` <br>The compound  interest is ${ p*Math.pow((1 + rt / (n * 100)), n * t1)}.`,"<br>");
+        
+
+                       document.write(`<br> <br><br>Program to find largest among two numbers`)
+                           let m=65
+                               n=30
+
+                     document.write(` <br>The Program to find largest among two numbers is,`,(m>n ? 65:30) );
+
+
+                     document.write(`<br> <br><br>Program to find smallest among three numbers`)
+                           let e=65
+                               f=30
+                               g=50
+
+                     document.write(` <br>The Program to find smallest  among two numbers is:`,(e<f?e:f)<g?(e<f?e:f):g,"<br>")
+
+                       i=22
+                       j=32
+                       document.write("The value is: ",i+j>=50 & i+j<=80?65:80)
+              
+                       document.write(`<br> <br><br>Program to find the person is eligible `)
+                       let age=16 ;
+                        
+                      
+                       document.write(age>=18?" <br> person is eligible":" <br>not eligible for voting");
+        
+
+
+
+    </script>
+    
+    
+</body>
+</html>

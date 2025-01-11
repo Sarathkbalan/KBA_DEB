@@ -1,0 +1,69 @@
+.nav{
+    background-color: rgb(229, 229, 207);
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+   
+
+    
+}
+.nav a{
+    text-decoration: none;
+    color: brown;
+    align-items: center;
+    justify-content:space-between ;
+}
+.nav a:hover{
+    color: rgb(121, 15, 143);
+    background-color: rgb(195, 121, 31);
+}
+.img{
+    height: 60px;
+    width: 40px;
+}
+.head{
+    font-size: x-large;
+    color: brown;
+    margin-left: 450px;
+}
+.main{
+    background-color: rgb(235, 225, 210);
+    width: 600px;
+    margin: auto;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom:20px ;
+}
+.addtocart{
+    position: relative;
+    padding-left: 400px;
+    margin-top: -40px;
+    color:red;
+
+}
+.addtocart input{
+    background-color: rgb(190, 126, 30);
+    color: rgb(224, 239, 234);
+}
+.main p{
+    color: rgb(123, 14, 154);
+    font-size:large;
+}
+.button{
+    margin-left: 1080px;
+}
+.main h2{
+    color: rgb(52, 5, 96);
+
+}
+.main li{
+    color: rgb(242, 22, 117);
+}
+.button input{
+    color: rgb(229, 229, 235);
+    background-color: brown;
+}

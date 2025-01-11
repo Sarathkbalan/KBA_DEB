@@ -1,0 +1,6 @@
+.coloumn1{
+    float: left;
+    width: 33%;
+    height: 300px;
+    border-left: 2px solid green;
+}

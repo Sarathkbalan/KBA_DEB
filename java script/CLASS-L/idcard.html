@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form onsubmit="formid(event)">
+      <h3> SCHOOL<br><br></h3>
+      <label> NAME:</label>
+      <input type="text"  id="name">
+      <label> CLASS:</label>
+      <input type="text"  id="class">
+      <br><br><br>
+      <input type="submit" onclick="handlechange()" value="Generate id">
+      <p id="PRINT"></p>
+      </form>
+    <script>
+        
+        function formid(event){
+          event.preventDefault();
+          event.target.elements['name'].value
+          const s= document.getElementById("name").value;
+          const r= document.getElementById("class").value;
+          const student={
+            name:s,
+            class:r,
+
+          }
+          
+          document.getElementById("PRINT").innerHTML=(`School<br>Name:${s}<br>Class:${r}`)  
+          
+        }
+        {
+         let a=[2,3,4,5,6]
+         document.write(`value of array is:${a}<br>`)
+         let d=[]
+         let c=[]
+         document.write(`value of array 2 is added:`)
+         a.forEach(function(w)
+         
+        {   w=(w+2);
+            d.push(w);
+           
+        }
+     )
+       
+        document.write(` ${d},`);
+    }
+    
+
+      let sum =function(a,b){
+            return a+b;
+        } 
+        {}
+       document.write("<br>The sum ",sum(1,2));
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

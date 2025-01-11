@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+            const number=21;
+            if (number % 3 === 0 || number % 7 === 0) {
+                 document.write(`${number} is a multiple of 3 or 7.`);
+            } else {
+                document.write(`${number} is not a multiple of 3 or 7.`);
+            }
+         
+            
+    // Write a JavaScript conditional statement to find the sign of the product of three numbers. Display with the specified sign.
+
+      
+       let a=2
+           b=5
+           c=7
+      let product = a * b * c;
+
+        
+         if (product > 0) {
+        document.write("<br><br>The sign of the product is +");
+
+            } else if (product < 0) {
+        document.write("The sign of the product is -");
+         } else {
+         document.write("The product is 0, so it has no sign.");
+         }
+    
+
+        //  Write a program using switch case to check the CGPA on given condition.
+        cgpa=7
+        switch (cgpa) {
+        case 8:
+            document.write("<br><br>You got 8 CGPA.");
+            break;
+        case 10:
+        document.write("<br><br>You got 10 CGPA.");
+            break;
+        case 7:
+        document.write("<br><br>You got 7 CGPA.");
+            break;
+        default:
+        document.write("<br><br>CGPA not recognized.");
+    }
+
+    // Write a program to print the month name by given number using switch
+    month=5
+    document.write("<br><br>")
+
+    switch (month) {
+        case 1:
+        document.write(" January");
+            break;
+        case 2:
+        document.write(" February");
+            break;
+        case 3:
+        document.write(" March");
+            break;
+        case 4:
+        document.write(" April");
+            break;
+        case 5:
+        document.write(" May");
+            break;
+        case 6:
+        document.write (" June");
+            break;
+        case 7:
+        document.write(" July");
+            break;
+        case 8:
+        document.write(" August");
+            break;
+        case 9:
+        document.write(" September");
+            break;
+        case 10:
+        document.write(" October");
+            break;
+        case 11:
+        document.write(" November");
+            break;
+        case 12:
+        document.write(" December");
+            break;
+        default:
+        document.write(" Invalid month number. Please enter a number between 1 and 12.");
+    }
+
+    // Squre root of a number
+    document.write("<br><br>")
+        a=1;
+        b=-5;
+        c=6;
+        d=b*b-4*a*c
+        root=(-b+Math.sqrt(d))/(2*a)
+        root1=(-b-Math.sqrt(d))/(2*a)
+        if(d>0){
+        document.write("The roots are ",root, " and " ,root1)
+        }
+        else if(d==0){
+            document.write(root)
+        }else{
+            document.write("no")
+        }
+
+       // Determine the temperature state
+       document.write("<br><br>")
+       temp=40
+    if (temp < 0) {
+        document.write("Freezing weather");
+    } else if (temp >= 0 && temp < 10) {
+        document.write("Very Cold weather");
+    } else if (temp >= 10 && temp < 20) {
+        document.write("Cold weather");
+    } else if (temp >= 20 && temp < 30) {
+        document.write("Normal in Temp");
+    } else if (temp >= 30 && temp < 40) {
+        document.write("It's Hot");
+    } else {
+        document.write("It's Very Hot");
+    }
+      
+        </script>
+</body>
+</html>

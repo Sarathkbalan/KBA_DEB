@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details</title>
+</head>
+<body>
+    <h1>Person Details Form</h1>
+    <div style="border: solid; width: 250px; height: 380px;">
+    
+        <label>First Name: <input type="text" id="firstName" required></label><br><br>
+        <label>Last Name: <input type="text" id="lastName" required></label><br><br>
+        <label>Date of Birth: <input type="date" id="dob" required></label><br><br>
+        <label>Address: <input type="text" id="Hname" placeholder="House name" required></label><br><br>
+        <label for=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;</label><input type="text" placeholder="House street" id="Hstreet">
+            <label for=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;</label><br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;<input type="text" placeholder="House No" id="Hno">
+                <label for="">  </label><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;<input type="number" placeholder="pincode" id="pincode">
+        <label>Phone Number: <input type="number" id="phone" required></label><br><br>
+        <button type="button" onclick="generateIDProof()">Generate ID Proof</button>
+    
+   </div><br><br><br><br><br><br>
+    <h2>ID Proof</h2>
+    <div id="idProof" style="border: 1px solid #000; padding: 10px; width: 300px;">
+        <h4>Name:<span id="Name1"></span></h4>
+        <h4>Last Name: <span id="Name2"></span></h4>
+        <h4>D O B : <span id="dob1"></span></h4>
+        <h4>Address : <span id="hname3"></span><br><br>
+        <span id="hstreet1"></span><br><br>
+        <span id="hno3"></span><br><br>
+        <span id="pincode3"></span><br><br>
+        </h4>
+        <h4>Phone : <span id="phone1"></span></h4>
+
+    </div>
+
+    <script>
+        function generateIDProof(){
+            const n1=document.getElementById("firstName").value
+            const n2=document.getElementById("lastName").value
+            const n3=document.getElementById("dob").value
+            const n4=document.getElementById("Hname").value
+            const n5=document.getElementById("Hstreet").value
+            const n6=document.getElementById("Hno").value
+            const n7=document.getElementById("pincode").value
+            const n8=document.getElementById("phone").value
+            const object={
+                fname:n1,
+                lname:n2,
+                mdob:n3,
+                phn:n8,
+                address:{
+                    Hname2:n4,
+                    hstreet:n5,
+                    Hno2:n6,
+                    pincode2:n7
+                }
+
+            }
+
+
+
+            document.getElementById("Name1").innerHTML=object.fname
+            document.getElementById("Name2").innerHTML=object.lname
+            document.getElementById("dob1").innerHTML=object.mdob
+            document.getElementById("hname3").innerHTML=object.address.Hname2
+            document.getElementById("hstreet1").innerHTML=object.address.hstreet
+            document.getElementById("hno3").innerHTML=object.address.Hno2
+            document.getElementById("pincode3").innerHTML=object.address.pincode2
+            document.getElementById("phone1").innerHTML=object.phn
+
+        } 
+
+        
+    </script>
+</body>
+</html>

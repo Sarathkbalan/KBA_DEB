@@ -1,0 +1,56 @@
+.nav{
+    background-color: rgb(229, 229, 207);
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+   
+
+    
+}
+.nav a{
+    text-decoration: none;
+    color: brown;
+    align-items: center;
+    justify-content:space-between ;
+}
+.nav a:hover{
+    color: rgb(121, 15, 143);
+    background-color: rgb(195, 121, 31);
+}
+.img{
+    height: 60px;
+    width: 40px;
+}
+.head{
+   color: rgb(96, 32, 156);
+   font-size:x-large;
+}
+.h{
+    margin-left: 140px;
+
+}
+.more{
+    text-decoration: none;
+    color: brown;
+    font-size: larger;
+}
+.more:hover{
+    color: yellow;
+    background-color: brown;
+}
+input{
+    color: blueviolet;
+    border-color: azure;
+    height: 40px;
+    width: 100px;
+    background-color: chartreuse;
+}
+.home{
+    margin-left: 50px;
+}
+
+
