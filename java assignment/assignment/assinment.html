@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<!-- // question 2 Make an html page having fields like  -->
+
+<div class="text-2xl h-[300px] w-[600px] ml-[400px] mt-[100px] border-2 border-black">
+<label for="">Name</label>
+<input class="border-2 border-black  mt-[20px]" type="text"><br><br><br>
+<label for="">Address</label>
+<input  class="border-2 border-black  " type="text"><br><br><br>
+<label for="">Degree:</label>
+<input type="radio" value="" name="Qualification">
+<label for="">Btech:</label>
+<input type="radio" value="" name="Qualification">
+<label for="">Mtech:</label>
+<input type="radio" value="" name="Qualification">
+<label for="">MCA:</label>
+<input type="radio" value="" name="Qualification" onclick="others()">
+<label for="">Others:</label>
+
+<div id="print"></div>
+</div>
+
+
+
+<body>
+    <script>
+
+
+
+   
+
+    function others(){
+     const options=document.createElement("select")
+     options.innerHTML=("<option>BCA</option> <option>PGDCA</option> <option>BCom</option> <option> MPhil</option>")
+     document.getElementById("print").appendChild(options)
+    }
+
+
+</script>
+
+<!-- Question 3 Create this page compare 2 numbers-->
+
+<div class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] ">
+<label >FIRST NUMBER:</label>
+<input class="border-2 border-black " id="fnum" type="number">
+<label >SECOND NUMBER:</label>
+<input class="border-2 border-black " id="snum" type="number">
+<button onclick="numbers()">Compare</button>
+
+<p id="printed"></p>
+</div>
+<script>
+    function numbers(){
+    const num1=document.getElementById('fnum').value
+    const num2=document.getElementById('snum').value
+
+    if(num1===num2){
+        document.getElementById("printed").innerHTML="Both number are same"
+
+    }else{
+        document.getElementById("printed").innerHTML="Both number are not same"
+
+    }
+    }
+
+</script>
+<!-- Question 4 Enter the name entered on this page to an array(entered order will be roll no) 
+ and on entering the roll number on dropdown display the name of student-->
+  
+ 
+
+
+<div class="grid border-2 border-black  h-[400px] w-[500px] ml-[400px] mt-[100px] ">
+
+
+   
+   
+   <p>Enter a student name:</p>
+   <input class="border-2 border-black "  type="text" id="typename"> 
+   <input class="border-2 border-black "  type="button" value="Add Name" onclick="addname()">
+
+   
+
+   <p>Enter Roll number:</p>
+   <select class="border-2 border-black "   id="drop" onchange="dropdown()">
+       <option>Select a Name</option>
+   </select>
+
+   
+
+   <p>Selected Name:</p>
+   <p id="selected"></p>
+
+   </div>
+
+   <script>
+
+       Name=[]
+
+
+       function addname(){
+
+           inputname=document.getElementById("typename").value;
+           Name.push(inputname)
+
+           let dropdown=document.getElementById("drop")
+
+           let option=document.createElement("option");
+           option.value=Name.length-1;
+           option.textContent=Name.length;
+
+           dropdown.appendChild(option);
+
+           document.getElementById("typename").value="";
+       }
+           
+
+       
+
+       function dropdown(){
+           
+           imp=document.getElementById("drop").value
+
+           if(imp!=""){
+               document.getElementById("selected").textContent=Name[imp];
+
+           }
+           else{
+               document.getElementById("selectedfruit").textContent=""
+           }
+       }
+
+
+
+
+
+   </script>
+
+
+ 
+
+    
+
+ <!-- Question 5 Upon clicking calculate each area -->
+<div class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] ">
+ <label for="">Enter the side of Squre</label>
+ <input class="border-2 border-black " type="number" id="sides">
+ <button onclick="area1()">Area of square</button>
+ <p id="output"></p>
+</div>
+
+<script>
+    function area1(){
+    const side=document.getElementById('sides').value
+     area=side*side
+    document.getElementById("output").innerHTML=`Area of Square =${area}`
+    }
+</script>
+
+<div class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] ">
+    <label for="">Enter the length</label>
+    <input class="border-2 border-black " type="number" id="length">
+    <label for="">Enter the breath</label>
+    <input class="border-2 border-black " type="number" id="breath">
+    
+    <button onclick="area2()">Area of Rectangle</button>
+    <p id="output1"></p>
+   </div>
+
+   <script>
+    function area2(){
+    const length1=document.getElementById('length').value
+    const breath1=document.getElementById('breath').value
+
+     area3=length1*breath1
+    document.getElementById("output1").innerHTML=`Area of Rectangle =${area3}`
+    }
+   </script>
+   <div class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] ">
+
+   <label for="">Enter the Radius</label>
+   <input class="border-2 border-black " type="number" id="radius">
+   <button onclick="area4()">Area of Circle</button>
+   <p id="output2"></p>
+   </div>
+
+   <script>
+    function area4(){
+        const radius1=document.getElementById("radius").value
+
+       const Circlearea = Math.PI * Math.pow(radius1, 2);
+       document.getElementById('output2').innerHTML=`Area of circle ${Circlearea}`
+    }
+   </script>
+  
+ <!-- Question  6 Through this text field enter the values and values 
+  should be saved in an array and print the array -->
+
+   <div  class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] border-2 border-black" >
+
+    <p>Enter Element:</p>
+    <input class="border-2 border-black " type="text" id="inputValue" placeholder="Enter value here">
+    <button onclick="addValue()">Add to Array</button>
+    
+    <h3>The Entered Array is:</h3>
+    <p id="arrayDisplay">[ ]</p>
+   </div>
+   
+
+  <script>
+    
+    let valuesArray = [];
+
+    
+    function addValue() {
+      const inputField = document.getElementById('inputValue');
+      const value = inputField.value
+     
+      valuesArray.push(value);
+
+      document.getElementById('arrayDisplay').textContent = valuesArray;
+      inputField.value = '';
+      
+    }
+  </script>
+ 
+ <!-- question number 7 From here enter elements in to array and do the following -->
+
+
+
+<div class="grid h-[600px] w-[500px] ml-[400px] mt-[100px] border-2 border-black ">
+
+<h3>Enter elements into the array and perform operations:</h3>
+
+
+<label >Enter element:</label>
+<input class="border-2 border-black " type="text" id="elementInput" placeholder="Type a value">
+<button onclick="addElement()">Add</button>
+
+
+
+<p id="arrayDisplay"></p>
+
+
+<label for="indexSelect">Index:</label>
+<select class="border-2 border-black " id="indexSelect" onchange="fetchElement()"></select>
+<span>Th element: <span id="fetchedElement"></span></span>
+
+
+<h4>Sorted Array:</h4>
+<p id="sortedArray"></p>
+
+
+<label for="searchInput">Search:</label>
+<input class="border-2 border-black " type="text" id="searchInput" placeholder="Enter value to search">
+<button onclick="searchElement()">Search</button>
+<p id="searchResult"></p>
+
+
+<h4>Reversed Array:</h4>
+<p id="reversedArray"></p>
+
+
+</div>
+<script>
+  let array = [];
+
+  function updateDisplay() {
+    
+    document.getElementById('arrayDisplay').textContent = JSON.stringify(array);
+
+  
+    const indexSelect = document.getElementById('indexSelect');
+    indexSelect.innerHTML = '';
+    array.forEach((_, index) => {
+      const option = document.createElement('option');
+      option.value = index;
+      option.textContent = index;
+      indexSelect.appendChild(option);
+    });
+
+    
+    document.getElementById('sortedArray').textContent = JSON.stringify([...array].sort());
+    document.getElementById('reversedArray').textContent = JSON.stringify([...array].reverse());
+  }
+
+  function addElement() {
+    const elementInput = document.getElementById('elementInput');
+    const element = elementInput.value.trim();
+    if (element) {
+      array.push(element);
+      elementInput.value = '';
+      updateDisplay();
+    }
+  }
+
+  function fetchElement() {
+    const index = document.getElementById('indexSelect').value;
+    const fetchedElement = document.getElementById('fetchedElement');
+    fetchedElement.textContent = array[index] || 'Invalid Index';
+  }
+
+  function searchElement() {
+    const searchInput = document.getElementById('searchInput').value;
+    const searchResult = document.getElementById('searchResult');
+    const index = array.indexOf(searchInput);
+    searchResult.textContent = index !== -1 ? `Found at index ${index}` : 'Not Found';
+  }
+</script>
+
+
+
+<!-- question number 8 Enter mark of list of subjects for a student -->
+
+ <div class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] border-2 border-black ">
+  <h1>Grade Calculator</h1>
+  <input class="border-2 border-black " type="text" id="subject" placeholder="Enter Subject">
+  <input class="border-2 border-black " type="number" id="mark" placeholder="Enter Mark (0-100)">
+  <button onclick="calculateGrade()">Submit</button>
+  <div class="result" id="result"></div>
+ </div>
+
+<script>
+  function calculateGrade() {
+      const subject = document.getElementById("subject").value;
+      const mark = parseFloat(document.getElementById("mark").value);
+
+     
+      let grade = "";
+
+if (mark > 90) {
+  grade = "A+";
+} else if (mark > 80) {
+  grade = "A";
+} else if (mark > 70) {
+  grade = "B+";
+} else if (mark > 60) {
+  grade = "C+";
+} else if (mark >= 50) {
+  grade = "C";
+} else {
+  grade = "Fail";
+}
+
+
+      document.getElementById("result").innerText = 
+          `Subject: ${subject}\nMark: ${mark}%\nGrade: ${grade}`;
+  }
+</script>
+
+  <!-- question 10 Create a text box to read array elements and on clicking button print largest element -->
+
+<div class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] border-2 border-black ">
+  <h1>Find Largest Element</h1>
+
+      <input type="number" id="element" placeholder="Enter element">
+      <button onclick="addElement()">Add Element</button>
+      <button onclick="findMaximum()">Maximum</button>
+
+      <div id="resulted"></div>
+  </div>
+
+  <script>
+      const elements = [];
+
+      function addElement() {
+          const input = document.getElementById("element").value;
+          const number = parseFloat(input);
+
+          if (isNaN(number)) {
+              alert("Please enter a valid number.");
+              return;
+          }
+
+          elements.push(number);
+          document.getElementById("element").value = "";
+          alert(`Element ${number} added!`);
+      }
+
+      function findMaximum() {
+          if (elements.length === 0) {
+              alert("No elements available to find the maximum.");
+              return;
+          }
+
+          const maxElement = Math.max(...elements);
+          document.getElementById("resulted").textContent = `The largest element is: ${maxElement}`;
+      }
+  </script>
+<!-- question number 11 Create a text box to read a number and upon button click reverse the number. -->
+
+
+<div class="grid h-[200px] w-[500px] ml-[400px] mt-[100px] border-2 border-black ">
+  <h1>Reverse a Number</h1>
+<input class="border-2 border-black " type="text" id="numberInput" placeholder="Enter a number">
+<button onclick="reverseNumber()">Reverse</button>
+<p id="outputs"></p>
+</div>
+
+<script>
+  function reverseNumber() {
+      const number = document.getElementById('numberInput').value;
+      const reversedNumber = number.split('').reverse().join('');
+      document.getElementById('outputs').textContent = `Reversed Number: ${reversedNumber}`;
+  }
+</script>
+</body>
+</html>
+
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="ml-[500px]">
+    <div class="h-[150px] border-2 border-black w-[500px] text-2xl">
+          <h1>Student List with Class Average</h1>
+
+    <input type="text" id="name" placeholder="Enter student name">
+    <input type="number" id="mark" placeholder="Enter mark (0-100)">
+    <button onclick="addStudent()">Submit</button>
+    <button onclick="calculateAverage()">Class Average</button>
+</div>
+<table>
+    
+        <tr>
+            <th>Student Name</th>
+            <th>Marks</th>
+            <th>Grade</th>
+        </tr>
+    <tbody id="studentTable"></tbody>
+</table>
+
+    <h3 class="text-xl" id="averageDisplay"></h3>
+
+</div>
+
+<script>
+    const students = [];
+
+    function calculateGrade(mark) {
+        if (mark > 90) return "A+";
+        if (mark > 80) return "A";
+        if (mark > 70) return "B+";
+        if (mark > 60) return "C+";
+        if (mark >= 50) return "C";
+        return "Fail";
+    }
+
+    function addStudent() {
+        const name = document.getElementById("name").value.trim();
+        const markInput = document.getElementById("mark").value.trim();
+        const mark = parseFloat(markInput);
+    
+        const grade = calculateGrade(mark);
+        students.push({ name, mark, grade });
+
+        displayStudents();
+        document.getElementById("name").value = "";
+        document.getElementById("mark").value = "";
+    }
+
+    function displayStudents() {
+        const table = document.getElementById("studentTable");
+        table.innerHTML = "";
+
+        students.forEach(({ name, mark, grade }) => {
+            const row = `<tr>
+                            <td>${name}</td>
+                            <td>${mark}</td>
+                            <td>${grade}</td>
+                        </tr>`;
+            table.innerHTML += row;
+        });
+    }
+
+    function calculateAverage() {
+        if (students.length === 0) {
+            alert("No students available to calculate the average.");
+            return;
+        }
+
+        const totalMarks = students.reduce((sum, student) => sum + student.mark, 0);
+        const average = totalMarks / students.length;
+
+        document.getElementById("averageDisplay").textContent = `Class Average: ${average.toFixed(2)}`;
+    }
+</script>  
+</body>
+</html>

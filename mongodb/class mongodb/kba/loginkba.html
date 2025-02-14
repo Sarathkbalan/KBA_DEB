@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+    async function loggedin() {
+        event.preventDefault();
+        const UserName=document.getElementById("UserName").value
+        const passwordnew=document.getElementById("passwordnw").value
+        const response1=await fetch("http://127.0.0.1:8000/login",{
+
+            method:"post",
+            
+            headers:{
+                'constant-Type':"application/json"
+            },
+            body:JSON.stringify({
+
+                UserName:UserName,
+                Password:passwordnew
+            })
+
+        })
+             console.log(response1);
+               const data=await response1.text()
+               if (response1.status=='200'){
+
+                window.location.href="homepagekba.html"
+
+               }
+               else{
+                alert("Try after sometime")
+               }
+    }
+   </script>
+
+
+
+
+
+</head>
+<body class="flex justify-center ">
+   <form action="" onsubmit="loggedin()">
+    <div class=" h-[300px]  w-80 bg-gray-200 mt-[180px] rounded-lg shadow-lg shadow-gray-400	">
+        <div class="text-2xl text-center text-purple-700 font-medium pt-4">Login</div>
+        <div class="pl-10  pt-5 " > UserName:</div>
+        
+          <div class=" pl-10"> <input type="email" id="UserName"  required ></div>
+          <div class="pl-10  pt-5 " > Password:</div>
+        
+          <div class=" pl-10"> <input type="password" id="passwordnw" required ></div>
+          <div class="flex">
+          
+          <button type="submit" class="bg-purple-700 h-8  w-16 rounded-lg ml-10  mt-4 hover:bg-red-500">login</button>
+          <p class="pl-10 mt-6 ml-4 text-purple-700"> Forgot Password? </p>
+        </div>
+           <div class="pl-10 mt-6">don't have an account? <a class="pl-4 text-l  text-purple-700 hover:bg-red-500 " href="signupkba.html">signup</a></div>
+        
+        
+        </div>
+    </div>
+</form>
+</body>
+</html>

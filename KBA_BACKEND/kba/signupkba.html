@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+       async function submit1(){
+        event.preventDefault();
+        // console.log("hi");
+        
+               const firstName1=document.getElementById('firstname').value
+               const lastName1=document.getElementById('lastname').value
+               const password1=document.getElementById('password').value
+               const Username1=document.getElementById('Username').value
+               const select1=document.getElementById('select').value
+
+               const response=await fetch("http://127.0.0.1:8000/signup",{
+                method:"post",
+                headers:{
+                    'Content-Type':"application/json"
+                },
+                body: JSON.stringify({
+                    FirstName:firstName1,
+                    LastName:lastName1,
+                    UserName:Username1,
+                    Password:password1,
+                    UserRole:select1
+                })
+
+               })
+
+               console.log(response.status);
+               const data=await response.text()
+               if (response.status=='201'){
+
+                window.location.href="loginkba.html";
+
+               }else if(response.status=='400'){
+                alert("user already exist")
+
+               }else{
+                alert("Try after sometime")
+               }
+       }
+       
+    </script>
+    
+</head>
+
+<body class="flex justify-center">
+  <form action="" onsubmit="submit1()">
+    <div class="h-[580px] w-[390px] bg-gray-200  mt-[80px] rounded-lg shadow-lg shadow-gray-400 " > 
+        <div class="text-3xl text-center pt-9 font-medium text-purple-900">SIGN UP</div>
+        <P class=" pl-10 pt-5">firstName:</P>
+        <div class=" pl-10 "> <input type="Name" class="h-8 w-[320px]" id="firstname"></div>
+        <P class=" pl-10 pt-5">lastName:</P>
+        <div class=" pl-10 "> <input type="Name" class="h-8 w-[320px]" id="lastname"></div>
+        <div class="pl-10  pt-5 " > Username:</div>
+        
+        <div class=" pl-10"> <input type="email"  class="h-8 w-[320px] " id="Username"></div>
+        <div class="pl-10  pt-5 " > Password:</div>
+      
+        <div class=" pl-10"> <input type="password"  class="h-8 w-[320px]  " id="password"></div> <br>
+        <div class=" pl-10">
+            
+            <select class="h-8 w-[320px] " name="" id="select">
+                <option class="h-8 w-[320px] " value="Admin">Admin</option>
+                <option class="h-8 w-[320px] " value="Admin">User</option>
+            </select>
+        </div>
+        <button type="submit" class=" h-8  w-16 bg-purple-800 ml-10 mt-4 rounded-lg hover:bg-red-500">signup</button>
+         <div class="pl-10 mt-6">you already have an account? <a class="pl-4 text-l  text-purple-800 hover:bg-red-500 " href="loginkba.html">Login</a></div>
+      
+      
+        
+    </div>
+</form>
+</body>
+</html>
