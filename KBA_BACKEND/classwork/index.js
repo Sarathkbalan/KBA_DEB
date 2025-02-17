@@ -2,6 +2,7 @@ import express,{json} from 'express';
 import dotenv from 'dotenv'
 import { userauth } from './Router/Userauth.js';
 import {adminsign} from './Router/adminsignup.js';
+import {adminauth} from './Router/adminauth.js';
 import cors from "cors"
 
 dotenv.config();
@@ -15,6 +16,7 @@ app.use(json())
 
 app.use("/",userauth);
 app.use('/admin',adminsign)
+app.use("/",adminauth)
 app.get('/',function(req,res){
     res.send("Hello Everyone");
 })

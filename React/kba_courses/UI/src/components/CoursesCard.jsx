@@ -1,24 +1,32 @@
-import React,{useState} from 'react'
-import Logo from "../assets/image/courses-removebg-preview.png"
+import React,{useState} from 'react';
+import courseImage from '../assets/image/courses-removebg-preview.png'
 
-const CoursesCard = ({course}) => {
 
-  const [showFullDescription,setShowFullDescription]=useState(false)
-  const description = showFullDescription ? course.description:course.description.substring(0,80)
+
+const CourseCard = ({course}) => {
+  
+  const [showFullDescription,setFullDescription] =useState(false)
+
+  const description = showFullDescription ? course.description : course.description.substring(0,80)
   return (
-          <div class="bg-red-400 h-[530px] w-[420px] mt-10 ml-10 rounded-lg shadow-xl shadow-red-300  ">
-          <p class="font-bold text-center pt-10">{course.title}</p>
-          <img class="ml-16 mt-10" src={Logo} alt=""/>
-          <p>{description}</p>
-          <button class="h-8 rounded-lg bg-red-800 hover:bg-blue-500 mt-2 ml-[150px] text-white " 
-          onClick={()=>setShowFullDescription(!showFullDescription)}>{showFullDescription?'less':'more'}</button>
-          <button class="h-8 rounded-lg bg-red-800 hover:bg-blue-500 mt-2 ml-[150px] text-white " >
-          Learn More
-          </button>
+    <div class="w-[400px] h- bg-stone-400 pt-6 rounded ml-12 place-items-center ">
+    <div class="place-items-center ">
+        <p class="font-bold text-2xl mb-6"> {course.title} </p>
+        <img class="rounded" src= {courseImage} alt="img" />
+    </div>
+    <div class="p-9  place-items-center">
+    <p class="font-serif"> {description} </p>
+       
+       <button className='flex flex-col w-full px-5 text-blue-800 hover:text-white
+       py-2' onClick={() =>setFullDescription(!showFullDescription)}>
+        {showFullDescription ? 'Less' : 'More' } 
+       </button>
 
-
-      </div>
+        <button class="bg-blue-900 text-white rounded w-[110px] h-[40px] mt-3">Learn More</button>
+        
+    </div>
+</div>
   )
 }
 
-export default CoursesCard
+export default CourseCard
