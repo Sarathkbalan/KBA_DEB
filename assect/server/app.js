@@ -13,11 +13,11 @@ app.use(
 app.use(json());
 app.use("/", routes);
 
-const PORT = 5000;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-mongoose.connect("mongodb://localhost:27017/Kba_courses");
+mongoose.connect("mongodb://mongodb:27017/Kba_courses");
 
 const database = mongoose.connection
 
